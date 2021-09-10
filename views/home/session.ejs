@@ -1,0 +1,26 @@
+<%- include('./../_partials/head.ejs'); -%>
+
+
+
+    <% if (session.user){ %>
+
+        <h3> bienvenue
+            <%= session.user.pseudo %>
+        </h3>
+
+
+        <% } else { %>
+
+            <h3>bienvenue inconnue</h3>
+            <% } %>
+
+
+
+
+
+
+                <form action="/session/create" method="post">
+                    <input type="text" name="pseudo" id="">
+                    <button type="submit">envoyer</button>
+                </form>
+                <%- include('./../_partials/footer.ejs'); -%>
